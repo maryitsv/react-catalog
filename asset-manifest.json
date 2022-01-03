@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "//maryitsv.github.io/react-catalog/static/css/main.94b3267e.css",
+    "main.js": "//maryitsv.github.io/react-catalog/static/js/main.8e79b5b6.js",
+    "index.html": "//maryitsv.github.io/react-catalog/index.html",
+    "main.94b3267e.css.map": "//maryitsv.github.io/react-catalog/static/css/main.94b3267e.css.map",
+    "main.8e79b5b6.js.map": "//maryitsv.github.io/react-catalog/static/js/main.8e79b5b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94b3267e.css",
+    "static/js/main.8e79b5b6.js"
+  ]
+}
