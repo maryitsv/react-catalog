@@ -2,20 +2,22 @@ import React from "react";
 import Product from "./Product";
 
 class SearchParam extends React.Component {
+    
+    internalProducts = [
+        { key: 1, title: "uñas", tags: ["uñas", "transparente", " blanco"], image: "https://manicurayestilo.com/wp-content/uploads/2021/07/unas-bonitas-y-sencillas-678x381.jpg" },
+        { key: 2, title: "uñas", tags: ["uñas", " multicolor"], image: "https://modaellas.com//wp-content/uploads/2020/05/unas-decoradas-de-manos-y-pies-2020-colores-pastel-unas-gelish-postizas.jpg" },
+        { key: 3, title: "uñas", tags: ["uñas", " acrilico, transparente, piedras"], image: "https://i.pinimg.com/550x/e5/86/48/e58648701d6ab03794d4683f45756a00.jpg" },
+        { key: 4, title: "uñas", tags: ["uñas", " multicolor"], image: "https://www.okchicas.com/wp-content/uploads/2021/03/Ideas-para-manicura-aesthetic-17.jpg" },
+        { key: 5, title: "uñas", tags: ["uñas", " azul", " blanco"], image: "https://www.okchicas.com/wp-content/uploads/2020/09/Unas-de-nubes-1.jpg" },
+        { key: 9, title: "cabello", tags: ["cabello", " rallitos"], image: "https://i.pinimg.com/564x/21/e7/48/21e748e0f8ef2fb7a8aa552457ff1a62.jpg" },
+        { key: 10, title: "maquillaje", tags: ["maquillaje", " matrimonio"], image: "https://looksantiago.s3.us-west-2.amazonaws.com/wp-content/uploads/2019/01/14162217/maquillaje.jpg" }
+    ];
+
     state = {
         search: "",
-        products: [
+        products: [...this.internalProducts
         ]
     };
-    internalProducts = [
-        { key: 1, title: "uñas", description: "uñas, rojo", image: "https://manicurayestilo.com/wp-content/uploads/2021/07/unas-bonitas-y-sencillas-678x381.jpg" },
-        { key: 2, title: "uñas", description: "uñas, largo", image: "https://modaellas.com//wp-content/uploads/2020/05/unas-decoradas-de-manos-y-pies-2020-colores-pastel-unas-gelish-postizas.jpg" },
-        { key: 3, title: "uñas", description: "uñas", image: "https://i.pinimg.com/550x/e5/86/48/e58648701d6ab03794d4683f45756a00.jpg" },
-        { key: 4, title: "uñas", description: "uñas, azul", image: "https://www.okchicas.com/wp-content/uploads/2021/03/Ideas-para-manicura-aesthetic-17.jpg" },
-        { key: 5, title: "uñas", description: "uñas, rojo", image: "https://www.okchicas.com/wp-content/uploads/2020/09/Unas-de-nubes-1.jpg" },
-        { key: 9, title: "cabello", description: "cabello", image: "https://i.pinimg.com/564x/21/e7/48/21e748e0f8ef2fb7a8aa552457ff1a62.jpg" },
-        { key: 10, title: "maquillaje", description: "maquillaje, matrimonio", image: "https://looksantiago.s3.us-west-2.amazonaws.com/wp-content/uploads/2019/01/14162217/maquillaje.jpg" }
-    ];
 
     constructor(props) {
         super(props);
@@ -45,8 +47,8 @@ class SearchParam extends React.Component {
             }
         }); */
         const products = this.internalProducts.filter(
-            item => item.description.includes(this.state.search) &&
-                item.description.includes(this.props.filterSelected));
+            item => item.tags.join("").includes(this.state.search) &&
+                item.title.includes(this.props.filterSelected));
         this.productChanged(products);
     }
 
@@ -73,7 +75,7 @@ class SearchParam extends React.Component {
             <Product
                 key={this.state.products[i].key}
                 title={this.state.products[i].title}
-                description={this.state.products[i].description}
+                tags={this.state.products[i].tags}
                 image={this.state.products[i].image}
             ></Product>
         );
