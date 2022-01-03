@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "//maryitsv.github.io/react-catalog/static/css/main.94b3267e.css",
-    "main.js": "//maryitsv.github.io/react-catalog/static/js/main.8e79b5b6.js",
-    "index.html": "//maryitsv.github.io/react-catalog/index.html",
-    "main.94b3267e.css.map": "//maryitsv.github.io/react-catalog/static/css/main.94b3267e.css.map",
-    "main.8e79b5b6.js.map": "//maryitsv.github.io/react-catalog/static/js/main.8e79b5b6.js.map"
+    "main.css": "/react-catalog/static/css/main.ad1070e4.css",
+    "main.js": "/react-catalog/static/js/main.d8a5f1fa.js",
+    "index.html": "/react-catalog/index.html",
+    "main.ad1070e4.css.map": "/react-catalog/static/css/main.ad1070e4.css.map",
+    "main.d8a5f1fa.js.map": "/react-catalog/static/js/main.d8a5f1fa.js.map"
   },
   "entrypoints": [
-    "static/css/main.94b3267e.css",
-    "static/js/main.8e79b5b6.js"
+    "static/css/main.ad1070e4.css",
+    "static/js/main.d8a5f1fa.js"
   ]
 }
